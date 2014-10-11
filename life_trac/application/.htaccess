@@ -1,0 +1,4 @@
+Deny from all
+RewriteEngine on
+  RewriteCond $1 !^(index\.php|assets|_searches|robots\.txt|favicon\.ico)
+  RewriteRule ^(.*)$ /sample/index.php/$1 [L]
