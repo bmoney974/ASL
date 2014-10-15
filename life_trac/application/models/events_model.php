@@ -18,17 +18,21 @@ class Events_model extends CI_Model {
 
     }
 
-    function create_event(){
-        $new_event_insert_data = array(
-            'eventName' => $this->input->post('eventName'),
-            'eventDate' => $this->input->post('eventDate'),
-            'eventLocation' => $this->input->post('eventLocation'),
+    function create_event($data){
+        $this->db->insert("events", $data);
 
-
-        );
-
-        $newtask = $this->db->insert('events',$new_event_insert_data);
-        return $newtask;
     }
+
+    function update($data){
+        $this->db->where("id",14);
+        $this->db->update("events",$data);
+
+    }
+
+   function delete(){
+       $this->db->where("id",$this->url->segment(3));
+       $this->db->delete("$data");
+   }
+
 
 }

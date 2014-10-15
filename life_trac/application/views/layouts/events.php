@@ -1,14 +1,32 @@
 <div class="">
 
 
+    <h2>Add Event</h2>
 
-    <?php
-    echo form_open('site/events');
-    echo form_input('eventName','Event Name');
-    echo form_input('eventDate','Event Date ');
-    echo form_input('eventLocation','Event Location ');
-    echo form_submit('submit','Add Event');
-    ?>
+
+    <?php echo form_open('site/events'); ?>
+    <p>
+        <label>Event Name</label>
+        <input type="text name="eventName" id="eventName" />
+    </p>
+
+    <p>
+        <label>Event Date</label>
+        <input type="text name="eventDate" id="eventDate" />
+    </p>
+
+    <p>
+        <label>Event Locaton</label>
+        <input type="text name="eventLocation" id="eventLocation" />
+    </p>
+
+    <p>
+        <input type="submit" value="Add Event">
+    </p>
+
+
+   <?php  echo form_close(); ?>
+
 
 </div>
 

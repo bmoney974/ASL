@@ -34,7 +34,11 @@ class Login extends CI_Controller {
 
     }
 
+    function logout(){
+        $this->session->sess_destroy();
+        redirect('home');
 
+    }
 
     function create_member(){
         $this->load->library('form_validation');

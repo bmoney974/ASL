@@ -1,11 +1,20 @@
 <?php
 
 class Site extends CI_Controller {
+
+
+
+
+    // retrieve
     public function index(){
         $this->load->helper('html');
         $this->load->view('home');
 
     }
+
+
+
+
 
 
     function events(){
