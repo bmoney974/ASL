@@ -105,6 +105,10 @@
         list-style:none;
     }
 
+    .event ul li {
+        display:inline-block;
+        padding:30px;
+    }
     .events ul li {
         display:inline-block;
         padding:30px;
