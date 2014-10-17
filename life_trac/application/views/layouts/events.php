@@ -13,7 +13,7 @@
 
     <li>
         <label>Event Date</label><br />
-        <input type="text" name="eventDate" id="eventDate" placeholder="yyyy-mm-dd"/>
+        <input type="date" name="eventDate" id="eventDate" placeholder="yyyy-mm-dd"/>
     </li>
 
     <li>
@@ -45,29 +45,33 @@
 
 
 <?php if(isset($records)) : foreach($records as $row) :?>
-    <div class="events">
-        <h5><?php echo "<h3>Event Block: " . $row->eventBlock . "</h3>" ; ?></h5>
-        <ul>
-            <li>
-                <?php echo "<h3>Event Name:</h3> <br />" . $row->eventName ; ?>
-            </li>
-            <li>
-                <?php echo "<h3>Event Date:</h3> <br /> " . $row->eventDate ; ?>
-            </li>
-            <li>
-                <?php echo "<h3>Event Location:</h3> <br /> " . $row->eventLocation; ?>
-            </li>
+    <ul class="sortable" style="list-style:none; width:100%; height:auto;">
+        <li>
+            <div class="events">
+                <h5><?php echo "<h3>Event Block: " . $row->eventBlock . "</h3>" ; ?></h5>
+                <ul>
+                    <li>
+                        <?php echo "<h3>Event Name:</h3> <br />" . $row->eventName ; ?>
+                    </li>
+                    <li>
+                        <?php echo "<h3>Event Date:</h3> <br /> " . $row->eventDate ; ?>
+                    </li>
+                    <li>
+                        <?php echo "<h3>Event Location:</h3> <br /> " . $row->eventLocation; ?>
+                    </li>
 
-            <li>
-                <?php echo anchor("site/delete/$row->id", "Delete");?>
-            </li>
+                    <li>
+                        <?php echo anchor("site/delete/$row->id", "Delete");?>
+                    </li>
 
-            <li>
-                <?php echo anchor("site/edit/$row->id", "Edit");?>
-            </li>
+                    <li>
+                        <?php echo anchor("site/edit/$row->id", "Edit");?>
+                    </li>
 
-        </ul>
-    </div>
+                </ul>
+            </div>
+        </li>
+    </ul>
 <?php endforeach; ?>
 
 <?php else : ?>

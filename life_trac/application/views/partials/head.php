@@ -5,7 +5,8 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 
     <link type="text/css" rel="stylesheet" href='<?echo 'localhost/life_trac/application/assets/css/style.css'?>' />
-
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <style>
     body {
         background:gray;
@@ -179,5 +180,17 @@
         border:1px solid white;
     }
 </style>
+
+    <script>
+        $(function() {
+            $( ".sortable" ).draggable({
+                placeholder: "ui-state-highlight",
+                tolerance: "pointer"
+
+            });
+        //   $( ".sortable" ).disableSelection();
+        });
+
+    </script>
 </head>
 <body>

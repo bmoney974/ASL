@@ -13,6 +13,7 @@ class Site extends CI_Controller {
 
     }
 
+        //edit page
     function edit(){
         $this->load->model('events_model');
         $data['records'] = $this->events_model->getAll();
@@ -63,7 +64,7 @@ class Site extends CI_Controller {
 
      function blocks(){
         $this->load->model('events_model');
-        $data['records'] = $this->events_model->getAll();
+        $data['records'] = $this->events_model->getBlocks();
         $this->load->view('blocks',$data);
 
     }

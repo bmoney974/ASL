@@ -9,11 +9,11 @@
         <br/><br />
     </div>
     <div class="row home_page">
-        <?php $this->load->view('layout/myblocks'); ?>
+        <?php $this->load->view('layouts/myblocks'); ?>
 
     </div>
 </div>
 
 <footer>
-    <?php $this->load->view('partials/footer'); ?>
+
 </footer>

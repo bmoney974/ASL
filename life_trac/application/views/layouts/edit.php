@@ -12,7 +12,7 @@
 
         <li>
             <label>Event Date</label><br />
-            <input type="text" name="eventDate2" id="eventDate" placeholder="yyyy-mm-dd"/>
+            <input type="date" name="eventDate2" id="eventDate" placeholder="yyyy-mm-dd"/>
         </li>
 
         <li>
