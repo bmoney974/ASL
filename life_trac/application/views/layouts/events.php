@@ -1,47 +1,52 @@
-<div class="event">
 
 
-    <h2>Add Event</h2>
+
+<button class="click add_btn">Add New</button>
+<div class="event_edit">
+
+    <div class="event">
+
+        <h3 style="text-align: center;">Add an Event</h3>
 
 
-    <?php echo form_open('site/create'); ?>
-    <ul>
-    <li>
-        <label>Event Name</label><br />
-        <input type="text" name="eventName" id="eventName" />
-    </li>
 
-    <li>
-        <label>Event Date</label><br />
-        <input type="date" name="eventDate" id="eventDate" placeholder="yyyy-mm-dd"/>
-    </li>
+        <?php echo form_open('site/create'); ?>
+        <ul>
+            <li>
+                <label>Event Name</label><br />
+                <input type="text" name="eventName" id="eventName" />
+            </li>
 
-    <li>
-        <label>Event Locaton</label><br />
-        <input type="text" name="eventLocation" id="eventLocation" />
-    </li>
+            <li>
+                <label>Event Date</label><br />
+                <input type="date" name="eventDate" id="eventDate" placeholder="yyyy-mm-dd"/>
+            </li>
 
-    <li>
-        <label>Choose Block</label><br />
-        <select name="eventBlock" id="eventBlock">
-            <option value="Business">Business</option>
-            <option value="Personal">Personal</option>
-        </select>
+            <li>
+                <label>Event Locaton</label><br />
+                <input type="text" name="eventLocation" id="eventLocation" />
+            </li>
 
-    </li>
+            <li>
+                <label>Choose Block</label><br />
+                <select name="eventBlock" id="eventBlock">
+                    <option value="Business">Business</option>
+                    <option value="Personal">Personal</option>
+                </select>
 
-    <li>
-        <input type="submit" value="Add Event">
-    </li>
-    </ul>
+            </li>
 
-   <?php  echo form_close(); ?>
+            <li>
+                <input type="submit" value="Add Event">
+            </li>
+        </ul>
 
+        <?php  echo form_close(); ?>
+
+
+    </div>
 
 </div>
-
-
-
 
 
 <?php if(isset($records)) : foreach($records as $row) :?>
@@ -65,8 +70,9 @@
                     </li>
 
                     <li>
-                        <?php echo anchor("site/edit/$row->id", "Edit");?>
+                        <span class="click"><?php echo anchor("site/edit/$row->id", "Edit");?></span>
                     </li>
+
 
                 </ul>
             </div>
@@ -78,5 +84,7 @@
 <h2>No Records Found. Please Enter an Event</h2>
 
 <?php endif; ?>
+
+
 
 

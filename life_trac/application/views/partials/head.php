@@ -179,17 +179,60 @@
         display: block;
         border:1px solid white;
     }
+
+    .sort {
+        margin-left: 50px;
+    }
+
+    .login_btn {
+
+
+
+    }
+
+    .btn_color{
+        background:white;
+        padding:5px;
+
+    }
+
+    .event_edit{
+        display: block;
+        width:400px;
+        border:1px solid black;
+        background: darkgray;
+        margin:0px auto;
+        margin-bottom: 60px;
+
+    }
+
+    .add_btn{
+        display: block;
+        background: cornflowerblue;
+        padding:15px;
+        color:#ffffff;
+        margin-bottom: 30px;
+        margin-left: 40px;
+
+    }
 </style>
 
     <script>
         $(function() {
-            $( ".sortable" ).draggable({
+            $( ".sortable" ).sortable({
                 placeholder: "ui-state-highlight",
-                tolerance: "pointer"
+                tolerance: "touch"
 
             });
         //   $( ".sortable" ).disableSelection();
         });
+
+    $(document).ready(function(){
+       $(".event_edit").hide();
+       $(".click").click(function(){
+           $(".event_edit").toggle(500);
+       });
+    });
 
     </script>
 </head>

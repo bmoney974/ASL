@@ -10,18 +10,6 @@
             <div class="nav nav-pills nav_bar">
                 <ul class="nav_bar">
 
-                    <li><a href="<?php echo base_url('/site/events')?>">Events</a></li>
-                    <li>
-                        <?php echo anchor("site/newsletter/", "Newsletter");?>
-                    </li>
-                    <li>
-                        <div class="login_btn">
-                            <span class="">
-                                <?php echo anchor('site/logout','Logout'); ?>
-                            </span>
-                        </div>
-                    </li>
-
 
                 </ul>
             </div>

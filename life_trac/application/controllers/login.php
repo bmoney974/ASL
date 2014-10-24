@@ -40,6 +40,7 @@ class Login extends CI_Controller {
 
     }
 
+
     function create_member(){
         $this->load->library('form_validation');
         $this->form_validation->set_rules('firstName','Name','trim|required');

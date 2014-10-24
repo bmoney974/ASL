@@ -2,7 +2,7 @@
 <?php $this->load->view('partials/head'); ?>
 
 <div class="main_header">
-<?php $this->load->view('partials/header'); ?>
+<?php $this->load->view('partials/login_header'); ?>
 </div>
 
 <div class="container">

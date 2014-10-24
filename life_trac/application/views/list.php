@@ -4,13 +4,13 @@
 </div>
 <div class="container">
     <div class="row title">
-        <h1>Events</h1>
+        <h1>Join the Mailing List</h1>
 
 
         <br/><br />
     </div>
     <div class="row home_page">
-        <?php $this->load->view('layouts/events'); ?>
+        <?php $this->load->view('newsletter'); ?>
 
     </div>
 </div>

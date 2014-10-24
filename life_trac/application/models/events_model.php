@@ -4,7 +4,7 @@ class Events_model extends CI_Model {
 
     public function getAll(){
 
-        $q= $this->db->order_by('eventDate', 'asc');
+        $this->db->order_by('eventDate','asc');
         $q = $this->db->get("events");
 
         if($q->num_rows()>0){
@@ -18,6 +18,8 @@ class Events_model extends CI_Model {
 
 
     }
+
+
 
     public function getBlocks(){
 

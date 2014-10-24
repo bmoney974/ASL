@@ -4,13 +4,14 @@
 </div>
 <div class="container">
     <div class="row title">
-        <h1>Events</h1>
+
 
 
         <br/><br />
     </div>
     <div class="row home_page">
-        <?php $this->load->view('layouts/events'); ?>
+        <h1>Thanks for Joining the List!</h1> <br /><br />
+       <h2> <?php echo anchor("site/events/", "Back");?></h2>
 
     </div>
 </div>
